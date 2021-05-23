@@ -8,7 +8,7 @@ client.once('ready', () =>{
 });
 
 client.on('message', message =>{
-    if(!message.content.startsWith(prefix) || message.author.bot || !message.author.id === '329062298046169098') return;
+    if(!message.content.startsWith(prefix) || message.author.bot || (message.author.id !== '329062298046169098' || message.author.id !== '374022136047861770')) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
